@@ -1,0 +1,101 @@
+<main class="main main--full">
+	<p class="lg-block-title">Вы можете добавить руководителя в вашу рекламную сеть</p>
+	<div class="white-container white-container--flat-top">
+		<ul *ngIf="list !== null && list.length > 0" class="moderations-list">
+			<li *ngFor="let item of list; let i = index" class="moderations-item lb-bg">
+				<div class="moderation-item-image">
+					<img src="img/avatar-1.jpg" width="65" height="65" alt="avatar">
+				</div>
+				<table class="table-2col">
+					<tr>
+						<td>Название</td>
+						<td><a href="#">Отбросы/misfits</a></td>
+					</tr>
+					<tr>
+						<td>Дата</td>
+						<td>17.08.2018</td>
+					</tr>
+					<tr>
+						<td>Время</td>
+						<td>17:04</td>
+					</tr>
+					<tr>
+						<td>Цена</td>
+						<td>500 руб.</td>
+					</tr>
+					<tr>
+						<td>Тип поста</td>
+						<td>1 час в топе без удаления</td>
+					</tr>
+				</table>
+				<button class="btn btn--dots" id="btn1"><span class="visually-hidden">меню</span></button>
+				<ul class="dots-list" id="set1">
+					<li class="dots-item"><a href="#">Смотреть пост</a></li>
+					<li class="dots-item">
+						<button class="btn" type="button" id="reject">Отклонить</button>
+					</li>
+					<li class="dots-item">
+						<button class="btn" type="button">Потвердить</button>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</main>
+
+<!-- <div class="container-fluid">
+		<div class="page-title">
+				<h4>Data Table</h4>
+		</div>
+		<div class="row">
+				<div class="col-md-12">
+						<div class="card">
+								<div class="card-block">
+										<div class="table-overflow">
+												<button [routerLink]="['/post']" btn btn-success">Add</button>
+												<table id="dt-opt" class="table table-lg table-hover">
+														<thead>
+																<tr>
+																		<th>Text</th>
+																		<th></th>
+																		<th></th>
+																</tr>
+														</thead>
+														<tbody *ngIf="list !== null && list.length > 0">
+																<tr *ngFor="let item of list; let i = index">
+																		<td>
+																				<div class="relative mrg-top-15">
+																						<span class="pdd-left-20">{{item.text}}</span>
+																				</div>
+																		</td>
+																		<td>
+																				<div class="mrg-top-10 text-center">
+																						<button (click)="accept($event, item.id)" btn btn-icon btn-flat btn-rounded dropdown-toggle">
+																								Accept
+																						</button>
+																				</div>
+																		</td>
+																		<td>
+																				<div class="mrg-top-10 text-center">
+																						<button (click)="reject($event, item.id)" btn btn-icon btn-flat btn-rounded dropdown-toggle">
+																								Reject
+																						</button>
+																				</div>
+																		</td>
+																		<td>
+																				<div class="mrg-top-10 text-center">
+																						<button [routerLink]="['/post/' + item.id]" btn btn-icon btn-flat btn-rounded dropdown-toggle">
+																								Show
+																						</button>
+																				</div>
+																		</td>
+																</tr>
+														</tbody>
+												</table>
+												<app-pagination [pages]="pages" [currentPage]="currentPage" [route]="route"></app-pagination>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</div> -->

@@ -1,0 +1,7 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li *ngFor="let page of pages" class="page-item {{page === currentPage ? 'active' : ''}}">
+            <a class="page-link" [routerLink]="['/' + route + '/' + page]">{{page}}</a>
+        </li>
+    </ul>
+</nav>

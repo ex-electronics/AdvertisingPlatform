@@ -1,0 +1,43 @@
+<main class="main main--full">
+	<p class="lg-block-title lg-block-title--btn">Вы можете добавить руководителя в вашу рекламную сеть
+		<button class="btn btn--regular" type="button" id="add" [routerLink]="['/group']">Добавить площадку</button>
+	</p>
+	<div class="white-container white-container--flat-top">
+		<ul *ngIf="list !== null" class="moderations-list">
+			<li *ngFor="let item of list.data; let i = index" class="moderations-item lb-bg">
+				<div class="moderation-item-image">
+					<img src="img/avatar-1.jpg" width="65" height="65" alt="avatar">
+				</div>
+				<table class="table-2col">
+					<tr>
+						<td>Название</td>
+						<td><a href="#">Отбросы/misfits</a></td>
+					</tr>
+					<tr>
+						<td>Дата</td>
+						<td>17.08.2018</td>
+					</tr>
+					<tr>
+						<td>Время</td>
+						<td>17:04</td>
+					</tr>
+					<tr>
+						<td>Цена</td>
+						<td>500 руб.</td>
+					</tr>
+					<tr>
+						<td>Тип поста</td>
+						<td>1 час в топе без удаления</td>
+					</tr>
+				</table>
+				<button class="btn btn--dots" id="btn1"><span class="visually-hidden">меню</span></button>
+				<ul class="dots-list">
+					<li class="dots-item">
+						<button class="btn" type="button">Удалить</button>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<app-pagination [pages]="pages" [currentPage]="currentPage" [route]="route"></app-pagination>
+	</div>
+</main>

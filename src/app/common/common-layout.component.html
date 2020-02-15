@@ -1,0 +1,50 @@
+<header class="header app" [ngClass]="
+    {
+        'is-collapsed': app.layout.isMenuCollapsed,
+        'is-opened': app.layout.isMenuOpened,
+        'rtl' : app.layout.rtlActived
+    }">
+    <div class="wrapper">
+        <a class="header__logo-link" [routerLink]="['/settings']">
+            <img class="header__logo-image" src="img/logo.svg" width="114" height="23" alt="vk-price">
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" [routerLink]="['/posts']">Автопостинг</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" [routerLink]="['/advs']">Модерация</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" [routerLink]="['/groups']">Мои площадки
+                        <span class="nav__link-note">12</span>
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" [routerLink]="['/users']">Пользователи</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" [routerLink]="['/payments']">Платежные данные</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" [routerLink]="['/myads']">Мои рекламные объявления</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<header class="sub-header">
+    <div class="wrapper">
+        <h4 class="sub-header__title">Пользователи</h4>
+        <p class="sub-header__intro">Добро пожаловать, Сергей Романович</p>
+        <span class="sub-header__active-date">активен до <output>16.05.18</output></span>
+        <button class="btn btn--dots" type="button" [routerLink]="['/settings']">
+            <span class="visually-hidden">Меню</span>
+        </button>
+    </div>
+</header>
+<div class="wrapper wrapper-content">
+    <router-outlet></router-outlet>
+</div>
+    

@@ -1,0 +1,35 @@
+<main class="main main--full">
+    <p class="lg-block-title lg-block-title--btn">Вы можете добавить руководителя в вашу рекламную сеть
+        <button [routerLink]="['/user']" btn btn--regular" type="button" id="add">Добавить руководителя</button>
+    </p>
+    <div class="white-container white-container--flat-top">
+        <ul *ngIf="moderators !== null" class="moderations-list">
+            <li *ngFor="let item of moderators; let i = index" class="moderations-item lb-bg">
+                <div class="moderation-item-image user-image-container">
+                    <img src="img/avatar-1.jpg" width="65" height="65" alt="avatar">
+                </div>
+                <table class="table-2col table-2col--info">
+                    <tr>
+                        <td>Имя</td>
+                        <td><a href="#">Дмитрий Гаврилов</a></td>
+                    </tr>
+                    <tr>
+                        <td>Должность</td>
+                        <td>Постер и модератор</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>vk.com/club23124</td>
+                    </tr>
+                </table>
+                <button class="btn btn--dots" id="btn1"><span class="visually-hidden">меню</span></button>
+                <ul class="dots-list" id="set1">
+                    <li class="dots-item">
+                        <button class="btn" type="button">Редактировать</button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <app-pagination [pages]="pages" [currentPage]="currentPage" [route]="route"></app-pagination>
+    </div>
+</main>

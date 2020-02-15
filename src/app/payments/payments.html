@@ -1,0 +1,70 @@
+<main class="main main--full">
+	<p class="lg-block-title">Вы можете добавить руководителя в вашу рекламную сеть</p>
+	<div class="white-container white-container--flat-top">
+		<ul *ngIf="list !== null" class="payment-list">
+			<li *ngFor="let item of list.data; let i = index" class="payment-item lb-bg">
+				<div class="payment-img">
+					<img src="img/pay1.png" alt="Приват 24" width="60" height="60">
+					<span class="payment-img__status payment-img__status--off">Выключена</span>
+				</div>
+				<div class="payment-item__description">
+					<div class="payment-title">
+						<h6>Приват 24 - платежная система для приема средств от ваших рекламодателей</h6>
+						<button class="btn btn--dots" id="btn1"><span class="visually-hidden">меню</span></button>
+						<a href="#" class="dots-link" id="set1">Настроить</a>
+					</div>
+					<a href="#" class="watch-link">Смотреть ролик по настройке</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</main>
+
+<!-- <div class="container-fluid">
+		<div class="page-title">
+				<h4>Groups</h4>
+		</div>
+		<div class="row">
+				<div class="col-md-12">
+						<div class="card">
+								<div class="card-block">
+										<div class="table-overflow">
+												<button [routerLink]="['/payment']" btn btn-success">Add</button>
+												<table id="dt-opt" class="table table-lg table-hover">
+														<thead>
+																<tr>
+																		<th>Type</th>
+																		<th></th>
+																</tr>
+														</thead>
+														<tbody *ngIf="list !== null">
+																<tr *ngFor="let item of list.data; let i = index">
+																		<td>
+																				<div class="list-info mrg-top-10">
+																						<img class="thumb-img" src="{{item.avatar}}" alt="">
+																				</div>
+																		</td>
+																		<td>
+																						<div class="mrg-top-2 text-center">
+																								<button [routerLink]="['/payment/' + item.id]" btn btn-icon btn-flat btn-rounded dropdown-toggle">
+																										Edit
+																								</button>
+																						</div>
+																				</td>
+																		<td>
+																				<div class="mrg-top-2 text-center">
+																						<button (click)="delete(event, item.id)" btn btn-icon btn-flat btn-rounded dropdown-toggle">
+																								Remove
+																						</button>
+																				</div>
+																		</td>
+																</tr>
+														</tbody>
+												</table>
+												<app-pagination [pages]="pages" [currentPage]="currentPage" [route]="route"></app-pagination>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+</div> -->

@@ -1,0 +1,34 @@
+<main class="main main--full">
+    <p class="lg-block-title">Вы можете добавить руководителя в вашу рекламную сеть
+    </p>
+    <div class="white-container white-container--flat-top">
+        <ul *ngIf="list !== null" class="rates-list">
+            <li *ngFor="let item of list.data; let i = index" class="rates-item">
+                <div class="rates-item-header">
+                    <h5>Бесплатно на 7 дней</h5>
+                    <p>пробный период для тестирования</p>
+                </div>
+                <div class="rates-item-body">
+                    <div class="rates-item-title">
+                        <h6>Неделя</h6>
+                    </div>
+                    <ul class="custom-list custom-list--rates">
+                        <li class="custom-list-item custom-list-item--rates">
+                            Создание отложенных записей
+                        </li>
+                        <li class="custom-list-item custom-list-item--rates">
+                            Подключение платежных систем
+                        </li>
+                        <li class="custom-list-item custom-list-item--rates">
+                            Подключение не ограниченного числа сообществ из вконтакте
+                        </li>
+                        <li class="custom-list-item custom-list-item--rates">
+                            Короткий адрес со списком всех ваших сообществ из вконтакте
+                        </li>
+                    </ul>
+                    <button (click)="buy($event, item.id)" btn btn--regular">Активировать</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</main>

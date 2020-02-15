@@ -1,0 +1,75 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-block">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h4 class="card-title">Add Post</h4>
+                            <form (submit)="create($event)" method="POST" enctype="multipart/form-data" class="form-horizontal mrg-top-40 pdd-right-30">
+                                <div class="form-group row">
+                                    <label for="form-1-5" class="col-md-2 control-label">Text</label>
+                                    <div class="col-md-10">
+                                        <textarea class="form-control" rows="3" id="text" name="text">{{post ? post.text : ''}}</textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="form-1-1" class="col-md-2 control-label">Image</label>
+                                    <div class="col-md-10">
+                                        <input type="file" class="form-control" id="image" name="images[]" placeholder="Image">
+                                        <small *ngIf="rel && rel.images[0]">{{rel.images[0].image}}</small>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="form-1-1" class="col-md-2 control-label">Video</label>
+                                    <div class="col-md-10">
+                                        <input type="file" class="form-control" id="video" name="videos[]" placeholder="Video">
+                                        <small *ngIf="rel && rel.videos[0]">{{rel.videos[0].video}}</small>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="form-1-1" class="col-md-2 control-label">Document</label>
+                                    <div class="col-md-10">
+                                        <input type="file" class="form-control" id="document" name="documents[]" placeholder="Document">
+                                        <small *ngIf="rel && rel.documents[0]">{{rel.documents[0].document}}</small>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="form-1-1" class="col-md-2 control-label">Audio</label>
+                                    <div class="col-md-10">
+                                        <input type="file" class="form-control" id="audio" name="audios[]" placeholder="Audio">
+                                        <small *ngIf="rel && rel.audios[0]">{{rel.audios[0].audio}}</small>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="form-1-1" class="col-md-2 control-label">Date/Time</label>
+                                    <div class="col-md-10">
+                                        <input type="text" id="date-range-picker" class="form-control" name="posted_at" value="2018.01.01 01:01:01" placeholder="Date range picker" />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="checkbox">
+                                        <input id="its_ad" name="its_ad" type="checkbox" value="1">
+                                        <label for="its_ad">Это реклама</label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="checkbox">
+                                        <input id="signature" name="signature" type="checkbox" value="1">
+                                        <label for="signature">Подпись</label>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-md-10">
+                                        <div *ngIf="post"><input  id="id" name="id" type="hidden" value="{{post.id}}"></div>
+                                        <button class="btn btn-success">{{post ? 'Save' : 'Create'}}</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

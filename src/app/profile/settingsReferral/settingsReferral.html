@@ -1,0 +1,31 @@
+<div class="wrapper wrapper-content">
+	<main class="main-exchange">
+		<div class="tab-content" id="ref-system">
+			<p class="lg-block-title">У вас есть <output>0</output> бесплатных дней</p>
+			<div class="white-container white-container--flat-top">
+				<div class="copy-link-container">
+					<input type="text" class="text-input text-input--copy-link" value="www.adrpice.ru/res234234">
+					<button class="btn btn--regular">Скопировать ссылку</button>
+				</div>
+				<ul class="custom-list">
+					<li class="custom-list-item">Реферальная программа с помощью которой вы можете оплачивать услуги сервиса.</li>
+					<li class="custom-list-item">Приведите друга по вашей реферальной ссылке и получите 3 дня бесплатного пользования.
+					</li>
+				</ul>
+				<div class="ref-stat">
+					<h5>Дымченко Сергей - </h5>
+					<p>зарегистрировался по вашей реферальной ссылке 28.07.2018.
+						Вам было начислено 3 бесплатных дня
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
+	<aside class="aside aside--right tab">
+		<button class="tablinks" [routerLink]="['/settings']" id="defaultOpen">Профиль</button>
+		<button class="tablinks" [routerLink]="['/settings/domain']" id="defaultOpen">Веб сайт биржи</button>
+		<button class="tablinks" [routerLink]="['/settings/action']">Купоны на скидку</button>
+		<a class="tablinks" [routerLink]="['/tarifs']">Тарифный план</a>
+		<button class="tablinks" [routerLink]="['/settings/referral']">Реферальная система</button>
+	</aside>
+</div>

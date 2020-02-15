@@ -1,0 +1,54 @@
+<div class="wrapper wrapper-content">
+	<main class="main-exchange">
+		<div class="tab-content" id="web-exchange">
+			<p class="lg-block-title">Придумайте название для вашей рекламной биржи
+			</p>
+			<div class="white-container white-container--flat-top">
+				<form #form *ngIf="info !== null" (submit)="submit($event, form)" class="form-horizontal mrg-top-40 pdd-right-30">
+					<div class="form-group row">
+							<label for="form-1-1" class="col-md-2 control-label">Name</label>
+							<div class="col-md-10">
+									<input type="text" class="form-control" id="name" placeholder="Name" value="{{info.data.name}}">
+							</div>
+					</div>
+					<div class="form-group row">
+							<label for="form-1-2" class="col-md-2 control-label">Login</label>
+							<div class="col-md-10">
+									<input type="text" class="form-control" id="login" placeholder="Login" value="{{info.data.login}}">
+							</div>
+					</div>
+					<div class="form-group row">
+							<label for="form-1-3" class="col-md-2 control-label">Email</label>
+							<div class="col-md-10">
+									<input type="email" class="form-control" id="email" placeholder="Email" value="{{info.data.email}}">
+							</div>
+					</div>
+					<div class="form-group row">
+							<label for="form-1-4" class="col-md-2 control-label">Link</label>
+							<div class="col-md-10">
+									<input type="text" class="form-control" id="link" placeholder="Link" disabled="disabled" value="{{info.data.social_id}}">
+							</div>
+					</div>
+					<div class="form-group row">
+							<label for="form-1-5" class="col-md-2 control-label">Landing</label>
+							<div class="col-md-10">
+									<textarea class="form-control" rows="3" id="landing">{{info.data.landing}}</textarea>
+							</div>
+					</div>
+					<div class="form-group row">
+							<div class="col-md-12">
+									<button class="btn btn-success" (click)="submit($event, form)">Save</button>
+							</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+	<aside class="aside aside--right tab">
+		<button class="tablinks" [routerLink]="['/settings']" id="defaultOpen">Профиль</button>
+		<button class="tablinks" [routerLink]="['/settings/domain']" id="defaultOpen">Веб сайт биржи</button>
+		<button class="tablinks" [routerLink]="['/settings/action']">Купоны на скидку</button>
+		<a class="tablinks" [routerLink]="['/tarifs']">Тарифный план</a>
+		<button class="tablinks" [routerLink]="['/settings/referral']">Реферальная система</button>
+	</aside>
+</div>

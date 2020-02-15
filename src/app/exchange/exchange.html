@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    <div class="page-title">
+        <h4>Groups</h4>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-block">
+                    <div class="table-overflow">
+                        <button [routerLink]="['/group']" btn btn-success">Add</button>
+                        <table id="dt-opt" class="table table-lg table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Avatar</th>
+                                    <th>Name</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody *ngIf="list !== null">
+                                <tr *ngFor="let item of list.data; let i = index">
+                                    <td>
+                                        <div class="list-info mrg-top-10">
+                                            <img class="thumb-img" src="{{item.avatar}}" alt="">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="info">
+                                            <span class="title">{{item.name}}</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="mrg-top-2 text-center">
+                                            <button [routerLink]="['/adv/' + item.id]" btn btn-icon btn-flat btn-rounded dropdown-toggle">
+                                                Post
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <app-pagination [pages]="pages" [currentPage]="currentPage" [route]="route"></app-pagination>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

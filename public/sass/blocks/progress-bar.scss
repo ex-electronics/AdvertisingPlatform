@@ -1,0 +1,38 @@
+.progress-bar {
+  position: relative;
+  width: 0;
+  height: 14px;
+  width: 150px;
+  margin: 0;
+  background: repeating-linear-gradient(-45deg, #5774a3, #5774a3 10px, #6b8fb5 10px, #6b8fb5 20px);
+  animation: roll 5s linear infinite;
+}
+
+.progress-bar::after {
+  width: 150px;
+  height: 16px;
+  display: block;
+  border: 1px solid #bdccdf;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  z-index: 0;
+}
+
+@-moz-keyframes roll {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 150px;
+  }
+}
+@-webkit-keyframes roll {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 150px;
+  }
+}

@@ -1,0 +1,104 @@
+<div class="wrapper wrapper-content">
+	<main class="main-exchange">
+		<div class="tab-content" id="web-exchange">
+			<p class="lg-block-title">Придумайте название для вашей рекламной биржи
+			</p>
+			<div class="white-container white-container--flat-top">
+				<div class="web-exchange-container">
+					<div class="web-exchange-input-container">
+						<span>www.</span>
+						<input type="text" placeholder="напишите имя поддомена">
+						<span>.adprice.ru</span>
+					</div>
+					<button class="btn btn--regular btn--light btn--220">Изменить название</button>
+				</div>
+			</div>
+			<div class="white-container">
+				<ul class="template-list">
+					<li class="template-item template-item-chosen">
+						<figure>
+							<img src="img/template-1.jpg" alt="template" width="253" height="206">
+							<figcaption class="template-chosen">
+								<p>Вы выбрали этот шаблон</p>
+								<span>Lorem ipsum dolor sit amet</span>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="template-item">
+						<figure>
+							<img src="img/template-2.jpg" alt="template" width="253" height="206">
+							<figcaption class="template-chose">
+								<button class="btn btn--regular btn--med" type="button">Выбрать</button>
+								<a class="template-link" href="#">Посмотреть</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="template-item">
+						<figure>
+							<img src="img/template-3.jpg" alt="template" width="253" height="206">
+							<figcaption class="template-chose">
+								<button class="btn btn--regular btn--med" type="button">Выбрать</button>
+								<a class="template-link" href="#">Посмотреть</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="template-item">
+						<figure>
+							<img src="img/template-4.jpg" alt="template" width="253" height="206">
+							<figcaption class="template-chose">
+								<button class="btn btn--regular btn--med" type="button">Выбрать</button>
+								<a class="template-link" href="#">Посмотреть</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="template-item">
+						<figure>
+							<img src="img/template-5.jpg" alt="template" width="253" height="206">
+							<figcaption class="template-chose">
+								<button class="btn btn--regular btn--med" type="button">Выбрать</button>
+								<a class="template-link" href="#">Посмотреть</a>
+							</figcaption>
+						</figure>
+					</li>
+					<li class="template-item">
+						<figure>
+							<img src="img/template-6.jpg" alt="template" width="253" height="206">
+							<figcaption class="template-chose">
+								<button class="btn btn--regular btn--med" type="button">Выбрать</button>
+								<a class="template-link" href="#">Посмотреть</a>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="tab-content" id="ref-system">
+			<p class="lg-block-title">У вас есть <output>0</output> бесплатных дней</p>
+			<div class="white-container white-container--flat-top">
+				<div class="copy-link-container">
+					<input type="text" class="text-input text-input--copy-link" value="www.adrpice.ru/res234234">
+					<button class="btn btn--regular">Скопировать ссылку</button>
+				</div>
+				<ul class="custom-list">
+					<li class="custom-list-item">Реферальная программа с помощью которой вы можете оплачивать услуги сервиса.</li>
+					<li class="custom-list-item">Приведите друга по вашей реферальной ссылке и получите 3 дня бесплатного пользования.
+					</li>
+				</ul>
+				<div class="ref-stat">
+					<h5>Дымченко Сергей - </h5>
+					<p>зарегистрировался по вашей реферальной ссылке 28.07.2018.
+						Вам было начислено 3 бесплатных дня
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
+	<aside class="aside aside--right tab">
+		<button class="tablinks" [routerLink]="['/settings']" id="defaultOpen">Профиль</button>
+		<button class="tablinks" [routerLink]="['/settings/domain']" id="defaultOpen">Веб сайт биржи</button>
+		<button class="tablinks" [routerLink]="['/settings/action']">Купоны на скидку</button>
+		<a class="tablinks" [routerLink]="['/tarifs']">Тарифный план</a>
+		<button class="tablinks" [routerLink]="['/settings/referral']">Реферальная система</button>
+	</aside>
+</div>

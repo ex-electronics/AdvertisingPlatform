@@ -1,0 +1,137 @@
+.main--full {
+  width: 100%;
+  border: 0;
+  margin: 0;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.rates-list {
+  @include list;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.rates-item {
+  width: 280px;
+  margin-bottom: 15px;
+  margin-right: 19px;
+  border: 1px solid #dbdbdb;
+  border-radius: 6px;
+  border-top: 6px solid #4a76a8;
+  height: 420px;
+}
+
+.rates-item:hover {
+  border-color: #4a76a8;
+}
+
+.rates-item--active:hover {
+  border-color: #d48686;
+}
+
+.rates-item--active {
+  border-color: #d48686;
+}
+
+.rates-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.rates-item-header {
+  padding: 20px 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.rates-item-header h5 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 20px;
+  color: #4a76a8;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.rates-item-header p {
+  @include helv;
+  margin: 0;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  color: #959595;
+  text-align: center;
+}
+
+.rates-item-body {
+  display: flex;
+  flex-direction: column;
+  height: 330px;
+}
+
+.rates-item-title {
+  position: relative;
+  padding: 25px 0;
+}
+
+.rates-item-title::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 1px;
+  background-color: #dbdbdb;
+}
+
+.rates-item--active .rates-item-title::before {
+  background-color: #d48686;
+}
+
+.rates-item-title h6 {
+  @include helv;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 38px;
+  color: #6181b5;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.rates-item-title span {
+  display: block;
+  text-align: center;
+  color: #494949;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.rates-item-title span i {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.custom-list--rates {
+  margin-top: 15px;
+  padding: 0 33px;
+  line-height: 15px;
+  border-bottom: none;
+}
+
+.custom-list-item--rates {
+  margin-bottom: 10px;
+}
+
+.custom-list-item--rates::before {
+  top: 5px;
+}
+
+.rates-item .btn {
+  display: block;
+  width: 180px;
+  margin: auto auto 20px;
+}
