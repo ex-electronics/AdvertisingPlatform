@@ -1,2 +1,2 @@
-# AdvertisingPlatformVkontakte
-Advertising Platform (Vkontakte)
+# AdvertisingPlatform
+Advertising Platform
